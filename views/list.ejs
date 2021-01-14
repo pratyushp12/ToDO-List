@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To-Do List</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="box" id="heading">
+      <h1> <%= listTitle %> </h1>
+  </div>
+
+  <div class="box">
+    <% for(var i=0;i<newItems.length;i++) {%>
+      <div class="item">
+        <input type="checkbox" >
+          <p> <%= newItems[i] %> </p>
+      </div>
+
+        <% } %>
+
+        <form action="/" method="post">
+          <input type="text" name="addList" placeholder="Enter item to add " autocomplete="off">
+          <button type="submit" name="list" value=<%= listTitle %>>+</button>
+        </form>
+
+  </div>
+
+
+</body>
+
+
+<footer>
+  Made with 💖 from India!
+  <p>©️ Pratyush Praveen | 2020</p>
+</footer>
+
+</html>
